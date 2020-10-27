@@ -1,0 +1,337 @@
+Rajesh Kumar
+=================
+asdfghjkl
+=================
+Docker		HALF
+SonarQube	HALF
+Jenkins		ONE
+Selenium	HALF
+Jmeter		HALF
+Jacoco		HALF
+DevSecOps - THEoRY	HALF
+==============================
+9:30 AM - 5:30 PM 
+------------------------
+Lunch - 1 PM - 2 PM IST
+------------------------
+BREAK - 15 mins 11: AM
+BREAK - 15 mins 3:30 PM
+==============================
+DEMO + LAB = AWS
+==============================
+8105843520
+==============================
+RAPID - ONLY DEMO
+============================================================
+PDF + SLIDES
+https://www.devopsschool.com/kit/master-in-devops-engineering.html
+=====================================================================
+What is Docker?
+====================
+	Container mgmt tool
+	
+
+	Tool
+		Save Cost		AVOID wastage
+		Save time		PS(1 DAY) - VS(5 mins) - 1(Sec)
+		Impro Quality
+		---------------
+		To run APP in Data center
+
+		run APP in WHAT??
+		---
+		in Container.
+
+		Release
+			CE - in Session - FREE and Open Source
+			EE - https://www.devopsschool.com/blog/?s=docker+enterprise
+		Written in GoLang
+		By Soloman Hykes
+		
+
+What is Container?
+=========================================================
+	Independent RUN TIME env for APP
+	
+	User NS with their own
+				NET NS
+				PID NS
+				MNT NS
+	===================================
+
+
+What are the components we need in COMPUTE unit to run any APP?
+Which are the things we need to RUN app?
+=============================================================
+HARDWARE
+	OS
+		KERNAL (The kernel is a computer program)
+			Namespace
+		Namespace TYPES
+		----------------------------------------------------------
+			CAN	ALLOWED		NEED
+		USER	MUL	MUL		1 
+		MNT	MUL	1		1		# For APPS files
+		PID	MUL	1		1		# for Getting CPU and RAM
+		NET	MUL	1		1
+		==========================================================
+		CGROUPS	for Allocating CPU and RAM to PID.
+
+		CAPABILITIES for user to root or not-root
+
+========================================================================
+OS
+	PC 
+		PERSONAL COMPUTING
+		=========
+		HUMAN
+				How/WHERE we run APP?
+=======================================================================================
+1990s			Internet 	Datacenter			
+=======================================================================================
+PHSYICAL SERVER			Virtual Machine
+
+
+
+How can we reduce Soft RUNNIng cost in Data center?
+How to avoid wastage?
+=============================================================================
+
+Other tools -
+https://www.devopsschool.com/blog/list-of-top-container-runtime-interface-projects/
+
+Docker Architecture
+=================================================
+Human ==> Docker Client => Docker Deamon/Server => ContainerD => KERNAL
+         =====================================	
+		Docker Engine
+
+
+Docker Components
+============================
+Docker Engine
+https://www.devopsschool.com/tutorial/docker/install-config/docker-install-commuityedition-centos-rhel.html
+
+[root@ip-172-31-17-234 centos]# history
+    1  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+    2  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    3  sudo yum install –y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    4  sudo yum-config-manager --enable rhui-REGION-rhel-server-extras
+    5  sudo yum install -y docker-ce
+    6  sudo yum install -y docker-ce
+    7  sudo systemctl enable docker
+    8  sudo systemctl start docker
+    9  clear
+   10  docker
+   11  clear
+   12  docker version'
+   13  docker version
+   14  clear
+   15  docker --version
+   16  docker info
+   17  clear
+   18  history
+
+
+Docker Image
+-------------
+	Collection of Filesystem
+		ROOT Filesysystem 
+		USER Filesysystem
+		APP1 Filesysystem
+		APP2 Filesysystem
+		APP3 Filesysystem
+	Your APP
+	Contains APP runtime filesystem
+	From one Image- Can create multiple container
+	What u have in image - You can see in container
+
+Docker Registry
+	contains 
+		Repos
+			contains 
+				docker-image
+	PUB
+		hub.docker.com
+
+	PVT	
+		artifactrory
+		nexus
+
+Docker Container
+	The moment you RUN docker IMAGE
+
+	ONE USER NS get initialized
+		ONE NET NS initialized - THIS GET ATTACHED TO USER NS
+		ONE PID NS initialized - THIS GET ATTACHED TO USER NS	 
+		ONE MNT NS initialized - THIS GET ATTACHED TO USER NS - MOUNT DOCKER IMAGE into USER
+
+
+
+OS Images
+========
+Contains
+	files/dires
+	Represent
+		OS + APPS
+	
+	File Systems
+	-----------
+	BOOT Filesysystem - KERNAL
+	ROOT Filesysystem 
+	USER Filesysystem
+	APP Filesysystem
+
+
+-=====================================================================
+DOCKER WORKFLOW
+=======================================
+HUMAN --> DOCKER CLIENT --> DOCKER SERVER
+			CHECK - DO I HAVE image in LOCAL Registry???
+			YES 
+				ContainerD---> KERNAL --> Init NS rersources - Container is DONE-
+			NO
+				- Docker Server downlod image from hub.docker.com to Local
+				ContainerD---> KERNAL --> Init NS rersources - Container is DONE-
+
+=====================================================================
+HUMAN LifeCycle
+=======================================
+BORN --> KID -> TEEN -> YOUNG -> MID --> OLD -> DIE
+------------------------------------------------------
+			GOD
+=====================================================================
+VMS LifeCycle
+=======================================
+Create -> Start -> Stop -> Start - Retsrt -> Kill -> Start -> Pause -> Unpuaade -> Stop -> Remove
+-------------------------------------------------------------------------------------------------
+					HYPERVISOR
+	
+======================================================================
+Container LifeCycle
+=======================================
+Create -> Start -> Stop -> Start - Retsrt -> Kill -> Start -> Pause -> Unpause -> Stop -> Remove
+-------------------------------------------------------------------------------------------------
+					DOCKER
+
+16  docker info
+   17  clear
+   18  history
+   19  clear
+   20  docker images
+   21  docker pull jenkins
+   22  docker images
+   23  clear
+   24  docker images
+   25  docker ps
+   26  docker ps -a
+   27  docker create jenkins
+   28  docker ps
+   29  docker ps -a
+   30  clear
+   31  docker ps -a
+   32  docker start b1c4abea4144
+   33  docker ps -a
+   34  docker ps
+   35  clear
+   36  docker stop b1c4abea4144
+   37  docker ps
+   38  docker ps -a
+   39  docker create jenkins
+   40  docker create jenkins
+   41  docker ps -a
+   42  docker start b1c4abea4144
+   43  docker ps -a
+   44  clear
+   45  docker ps -a
+   46  docker ps -a
+   47  docker restart b1c4abea4144
+   48  docker ps -a
+   49  clear
+   50  docker ps -a
+   51  docker kill b1c4abea4144
+   52  docker ps -a
+   53  docker kill 02b55a2d73c8
+   54  clear
+   55  docker ps -a
+   56  docker start b1c4abea4144
+   57  docker ps -a
+   58  clear
+   59  docker pause  b1c4abea4144
+   60  clear
+   61  docker ps -a
+   62  docker unpause  b1c4abea4144
+   63  docker ps -a
+   64  docker stop  b1c4abea4144
+   65  docker ps -a
+   66  docker rm b1c4abea4144
+   67  docker rm 4cffc00fd2b1
+   68  docker start 02b55a2d73c8
+   69  docker rm 02b55a2d73c8
+   70  history
+
+
+65.0.30.48
+centos
+---
+sudo -s
+----
+DOCKER NEEDs root or user need to be part of the Group called "docker"
+
+=================================
+
+Surbhi Singi	13.234.117.56
+Ganesh Pisal	13.234.231.172
+Hemant Baraliya	13.235.113.194
+kunal	13.233.86.144
+Sheetal Tagde	13.233.61.205
+Yogita	13.127.156.248
+Surajit Chakraborty	65.0.93.179
+Vedant Vardey	13.233.48.232
+Shruti Keswani	13.127.103.48
+Sugandha Mishra	13.234.20.151
+pooja panchal	13.233.87.60
+Prabal Kumar	13.234.232.182
+pradeepkumar walke	13.234.78.2
+Niharika Srivastava	15.206.79.210
+Abadhesh Mishra	13.235.16.128
+Sadik Tamboli	65.0.133.44
+Arpan Kala	65.0.17.100
+Prateek Thakur	52.66.206.99
+Prachi Raghuwanshi	52.66.196.121
+Gaurav Joshi	13.233.112.220
+Princi Verma	13.235.104.186
+Swati Bankar	13.232.134.111
+Vinod Vishwakarma	13.234.117.219
+	13.233.90.219
+	13.234.238.236
+
+Username - centos
+PPK - https://www.devopsschool.com/notes/docker/2019/
+	rajesh-mumbai.ppk
+
+How to use putty?
+https://www.devopsschool.com/blog/how-to-login-linux-server-of-aws-from-windows-using-putty/
+- Step 4
+- Step 5 
+- Step 6
+
+
+
+Assignment ?
+==========================
+Docker Stop Vs Docker KILL?
+Docker Pause Vs Docker unPause?
+
+
+
+
+
+
+
+
+
+
+
+
+
