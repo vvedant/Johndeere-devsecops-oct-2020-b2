@@ -324,9 +324,169 @@ Docker Stop Vs Docker KILL?
 Docker Pause Vs Docker unPause?
 
 
+====================================================================
+How to use container?
+		has 
+		    app
+		----------------
+		BROWSER	such as - jenkins
+		NON Browser - such as - ls
+---------------------------------------------------------------------
+PHYSICAL server 		Virtual server			Container 
+is running			is running			is running
+coz of 				coz of 				coz of 
+PID1 is running			PID1 is running			PID1 is running
+
+PID1 can be SYSTEMD		PID1 can be SYSTEMD		PID1 can be ANYTHING
+								such as
+								java
+								perl
+								py
+								ruby
+								bash
+								x
+								yz
 
 
 
+=============================================================================
+
+Docker Container
+	The moment you RUN docker IMAGE
+
+	ONE USER NS get initialized
+		ONE NET NS initialized - THIS GET ATTACHED TO USER NS
+		ONE PID NS initialized - THIS GET ATTACHED TO USER NS	 
+		ONE MNT NS initialized - THIS GET ATTACHED TO USER NS - MOUNT DOCKER IMAGE into USER
+
+
+=============================================================================
+  1  clear
+    2  ps -eaf
+    3  clear
+    4  clear
+    5  ps
+    6  echo $SHELL
+    7  ps -eaf | grep 19499
+    8  ps -eaf | grep 19497
+    9  ps -eaf | grep 19478
+   10  ps -eaf | grep 19477
+   11  ps -eaf | grep 19474
+   12  cleaer
+   13  clear
+   14  ps -eaf | grep 1192
+   15  ps -eaf
+   16  clear
+   17  docker ps
+   18  ps -eaf | grep docker
+   19  docker ps -a
+   20  docker start 56ae562ce93b
+   21  clear
+   22  docker ps
+   23  ps -eaf | grep docker
+   24  ps -eaf | grep 10050
+   25  ps -eaf | grep 8939
+   26  clear
+   27  ps -eaf | grep 8939
+   28  clear
+   29  docker ps
+   30  docker inspect 02b55a2d73c8 | grep -i ip
+   31  docker inspect 56ae562ce93b | grep -i ip
+   32  clear
+   33  docker ps
+   34  docker exec 56ae562ce93b ps -eaf
+   35  docker exec 02b55a2d73c8 ps -eaf
+   36  clear
+   37  docker ps
+   38  dcoker exec 56ae562ce93b ls /
+   39  docker exec 56ae562ce93b ls /
+   40  docker exec 02b55a2d73c8 ls /
+   41  clear
+   42  docker ps
+   43  dcoker exec 56ae562ce93b touch /tmp/rajesh1.txt
+   44  docker exec 56ae562ce93b touch /tmp/rajesh1.txt
+   45  docker exec 02b55a2d73c8 touch /tmp/rajesh2.txt
+   46  docker exec 56ae562ce93b ls /tmp/
+   47  docker exec 02b55a2d73c8 ls /tmp/
+   48  history
+===========================================
+RUN
+======================================
+PULL + Create + Start + ATTACH TO PID1
+
+RUN -d 
+======================================
+PULL + Create + Start + DO NOT ATTACH TO PID1
+
+
+How to use container?
+=======================================
+GO INSIDE Container
+
+exec
+	will execute an executable inside a container
+	HUMAN --> COMPUTE
+		---> Interact
+			   SHELL - PS - BASH
+	docker exec -it 6c417459220e /bin/bash
+
+attach
+	attach will attached PID 1
+
+-----------------------------------------------
+
+Access from OUTSIDE
+	--- network
+-----------------------------------
+docker run -d -p 8080:8080 jenkins
+		 nodeport:contPort
+docker run -d -p 8090:8080 jenkins
+
+docker run -d -p 65.0.30.48:8080:172.17.0.3:8080 jenkins
+		 nodeport:contPort
+
+How to come out of the container without Existing?
+- control + p + q
+
+
+
+
+
+
+  1  clear
+    2  docker exec -it 6c417459220e /bin/bash
+    3  docker -s
+    4  docker ps
+    5  clear
+    6  docker ps
+    7  docker run -it ubuntu
+    8  docker ps
+    9  docker ps -a
+   10  clear
+   11  docker run -it ubuntu
+   12  docker ps -a
+   13  clea
+   14  clear
+   15  docker ps
+   16  docker attach 6c417459220e
+   17  docker ps
+   18  clear
+   19  docker ps
+   20  docker attach 0554e58e35ca
+
+ 1  docker ps
+    2  clear
+    3  docker ps
+    4  docker inspect 9c04bd5db236 | grep -i ip
+    5  clear
+    6  ping 172.17.0.2
+    7  curl http://172.17.0.2:8080
+    8  curl http://172.17.0.2:8080
+    9  clear
+   10  docker ps
+   11  docker run -d -p 8080:8080 jenkins
+   12  docker ps
+   13  docker run -d -p 8090:8080 jenkins
 
 
 
