@@ -84,8 +84,8 @@ admin
 
 C:\tools\sonarqube\scanner\sonar-scanner-cli-4.5.0.2216-windows\bin\sonar-scanner.bat
 
+================================================================================
 
-
-
-
+Example Source COde - https://github.com/SonarSource/sonar-scanning-examples
+https://www.devopsschool.com/tutorial/sonarqube/sonarqube-properties.html
 
