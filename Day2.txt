@@ -88,4 +88,134 @@ C:\tools\sonarqube\scanner\sonar-scanner-cli-4.5.0.2216-windows\bin\sonar-scanne
 
 Example Source COde - https://github.com/SonarSource/sonar-scanning-examples
 https://www.devopsschool.com/tutorial/sonarqube/sonarqube-properties.html
+===========================================================================
+
+Jenkins
+=============================
+
+What is Jenkins?
+==================================
+	CI tools
+	Continous Integration tools
+
+	Dev in JAVA
+
+	Release
+		Jenkins ---- FOCUS -- FREE - Open Source
+		enterprise jenkins
+		Jenkins X
+		Blue Ocean
+	POWERED by Plugins
+
+	One of the TOP 10 proj driven community
+		
+
+What is Continous Integration?
+
+Continous Integration
+		     with what?
+	=================================
+	TEAM - Dev - QA - Ops
+	Tools - DevTools - QATools - OpsTools
+	Process - Dev - QA - Ops
+	===========================
+			Continously 
+	
+Auto Build + Auto Testing
+=========================	= CI
+	Imm Feedback
+
+=================================================================================
+PLAN -> Code -> Review -> Build -> UT -> Package -> Archive -> Dep2QA -> AT -> CC
+=================================================================================
+JIRA -> GIT  -> SOnarQube-> Maven-> JUNIT->JAR   -> Artifactory->Ansible->Selenum -> JACOCO
+==========================================================================================
+ARCh -> DEV -> DEV    -> BR     -> DEV -> OPS  -> OPS  -> QA -> QA --> QA
+==========================================================================================
+				Integrate All tools - Team - Process
+				Schedule a work
+				Imm Feedback
+				=======================================
+			JENKINS
+
+Other Tools
+=============================
+Teamcity - bamboo - UBuild - TravisCI - github - TFSOnline
+========================================================
+
+How jenkins work? Jenkins Architecture
+============================================
+Server 
+	HUMAN ---> WEB Dashboard - 8080
+
+Client(S)
+	AKA Build Node
+	AKA Slave
+	AKA Worker
+	AKA Agent
+https://www.devopsschool.com/blog/jenkins-architecture-explained/
+
+=========================
+
+How to install it?
+=================================
+https://www.devopsschool.com/tutorial/jenkins/jenkins-installation-and-configuration.html
+
+http://13.233.32.76:8080/
+devops
+devops123
+
+===================================================
+JOB == Item == Project
+
+Some Rules for setting up a Job in Jenkins
+=============================================
+Questions
+======================================
+Q1 - What is your technology?
+			JAVA		which version??		JAVA
+			DONTET		which version??
+			PY		which version??
+			RUBY		which version??
+
+Q2 Where is your source code?
+			git		path - url - accesss
+			svn	
+			clearcase
+		https://github.com/devops-school/helloworld-java-maven
+
+Q3 - What is your Builder?
+		   Maven		maven
+		   Gradle
+		   bash
+		   ps
+		maven=
+	======================================
+	PHASE	compile		test		package		archive
+	GOAL -	compile		test		package		deploy
+
+
+https://www.devopsschool.com/videos/show/maven?type=video
+
+Q4. How frequent you want this build?
+		hourly
+
+Q5 . Whom you want to send a IMM feedback.
+			rajesh@devopsschool.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
