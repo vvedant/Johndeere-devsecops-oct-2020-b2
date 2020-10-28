@@ -1,0 +1,91 @@
+What is SonarQube?
+-----------------------
+	Quality Management tool
+
+	Quality 
+		Code Quality Management tool - FOCUS
+		Test Quality Management tool
+
+	Release
+		Community - FOCUS
+			Free and Open Source
+		Developer
+		Enterprise
+		Data Center
+	Developed in JAVA
+	
+	By SonarSource
+
+	Version 8.X
+
+	Support - 27 Programming Lang
+	https://www.sonarqube.org/features/multi-languages/
+	
+How can i get code Quality reports?
+ - Peer Code Review - By Human
+ - Static Code Review - By Tools [ FOCUS ]
+
+Static Code Review
+	is a process in which Tools run on the code and generate Code Quality Reports
+	Tools has rules which run on the code and generate Code Quality Reports
+	rules is program.
+
+What are list of Static Code Review?
+https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
+===================================================
+How SonarQube Works!! SonarQube Arch.
+==================================================
+SonarQube
+---------------
+Server
+	WEB - 9000	
+		Rules - Comes from STATIC Code Analysis
+	DB - ANY RDBMS (trial h2)
+		Historial Reports of Code Quality	
+	Search - ElasticSearch
+
+Scanner
+https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+
+Source Code
+https://github.com/devopsschool-demo-labs-projects/java-sonarqube-helloworld-src
+
+
+===============
+Scanner runs of Code - and Rest we discussed.
+
+
+==============================================================
+How to install SonarQube?
+ - JAVA 11
+	$ sudo yum install java-11-openjdk-devel
+ - NON ROOT user
+===============================
+13.233.32.76
+centos
+
+
+[centos@ip-172-31-10-58 sonarqube]$ ls -1
+bin			START - STOP SCRIPT
+conf			Prop file for SQ. configuration
+COPYING
+data			Container h2 db file
+elasticsearch
+extensions		Add more feature..jar file
+lib			SQ jar file
+logs
+temp
+web			WEB Dashboard
+
+
+http://13.233.32.76:9000/
+admin
+admin
+
+C:\tools\sonarqube\scanner\sonar-scanner-cli-4.5.0.2216-windows\bin\sonar-scanner.bat
+
+
+
+
+
+
