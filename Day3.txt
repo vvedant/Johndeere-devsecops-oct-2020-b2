@@ -34,3 +34,59 @@ SonarQube -
  - Server
  - Scanner
  - Code
+ 
+ http://15.207.254.122:8080/
+
+Integration of JOBs.
+===========================
+SCAN -> Compile -> UT -> Package
+
+======================================================
+Imm Feedback
+======================================================
+	EMAIL	SMTP
+		Mailer Plugin		E-mail Notification
+		Email Extension Plugin	Extended E-mail Notification
+
+	CHAT
+		Slack
+		Team
+		Jabbar
+		Skype
+
+	PIPELINE DASHBOARD
+
+		Using Existing Jobs -- NOT In use anymore.  	== Build Pipeline
+			Pre - ALL JOBS must be connected through - Build Another Project.
+
+
+		Using Code -					== Pipeline
+		https://www.jenkins.io/doc/book/pipeline/
+		code 
+		Stored in jenkinsfile
+		groovy dsl
+	Node Any
+		Pipeline
+			Stage
+				Step	powered by plugins
+				Step
+				Step
+
+			Stage
+				Step
+				Step
+				Step
+
+
+https://github.com/devops-school/helloworld-java-maven
+
+
+
+
+
+
+ 
+
+
+
+
