@@ -20,3 +20,17 @@ http://15.207.254.122:8080/github-webhook/
 iFBDOBhNhaxL4T9ass93HRXun2JF161Z
 
 -u, --user <user:password> Server user and password
+
+
+Rules of Integrating any tools in Jenkins
+==============================================
+Step 1- Install plugins
+
+Step 2 - Configure plugins
+
+Step 3 - Use plugins
+
+SonarQube -
+ - Server
+ - Scanner
+ - Code
