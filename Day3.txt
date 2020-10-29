@@ -1,0 +1,22 @@
+How to Schedule a jobs in Jenkins?
+1. @certain time                              = Build periodically
+2. @certain time but only if SCM changes.     = Poll SCM
+3. Build this job when other Job is built.    = Build after other projects are built
+4. Trigger a Build from remote using script   = Trigger builds remotely (e.g., from scripts)
+5. Trigger a build when someone pushing a code = GitHub hook trigger for GITScm polling
+6. Trigger a another job when this job is completed. == POST BUILD ACTION
+
+Refernce
+https://www.devopsschool.com/blog/how-to-schedule-and-trigger-a-jenkins-job-automatically/
+
+JENKINS_URL/job/Rajeshk/job/job1/build?token=TOKEN_NAME
+JENKINS_URL/job/Rajeshk/job/job1/buildWithParameters?token=TOKEN_NAME
+
+curl -X POST --user devops:111ed3be9ea84a00568aa3c2dc6de3d05e http://15.207.254.122:8080/job/Rajeshk/job/job1/build?delay=0sec
+
+http://15.207.254.122:8080/github-webhook/
+
+
+iFBDOBhNhaxL4T9ass93HRXun2JF161Z
+
+-u, --user <user:password> Server user and password
