@@ -80,6 +80,47 @@ Imm Feedback
 
 https://github.com/devops-school/helloworld-java-maven
 
+https://github.com/devops-school/helloworld-java-maven
+=======================================================================
+=======================================================================
+Nodes Management
+=====================
+1 Node -
+
+JobX - 1 Hour - 24 Hours -- Node is Fully Occupied
+JobY - 1 Hour - 24 Hours -- Node is Fully Occupied
+JobZ
+
+- Node Executors
+- Job Concurrent
+- How to add Nodes
+	- Linux - SSH 
+			IP		13.233.225.222
+			USER		centos
+			Pass or Key	Key
+		JAVA installed
+		sudo yum install java-1.8.0-openjdk-devel
+	- Windows - RMI
+- Nodes Pool---
+		Pool of 5 nodes...
+		 - 1 NODE
+
+Parameterized 
+================================
+
+Backup and Restore
+
+Auth and Auth
+========================================================================
+========================================================================
+
+
+
+
+
+ 
+
+
 
 
 
